@@ -1,0 +1,66 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.section {
+  border: 1px solid black;
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  background-color: #f4f4f4;
+  width: 32%;
+}
+
+.section .title {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff6347; /* Change this color for each section */
+  color: white;
+  padding: 5px;
+  border: 1px solid black;
+  font-size: 1.25em;
+}
+
+.section .content {
+  margin-top: 50px; /* Adjust this to prevent overlap with title */
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .section {
+      width: 48%;
+  }
+  .section:nth-child(3) {
+      width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .section {
+      width: 100%;
+  }
+}
